@@ -51,15 +51,27 @@ Készíts egy **Vanilla JS Todo alkalmazást** – keretrendszer nélkül, csak 
 
 | Kritérium | Pont |
 |---|---|
-| Alap UI: hozzáadás és törlés működik | 10p |
-| Complete jelölés vizuálisan egyértelmű állapottal | 10p |
-| LocalStorage mentés minden változáskor + betöltés oldalbetöltéskor | 15p |
-| Input validáció + felhasználóbarát hibaüzenet | 5p |
-| Kódminőség (strukturált függvények, DRY, olvasható névadás) | 10p |
+| `app.js` TODO-k megvalósítása (load/save/render/add/delete/toggle/submit) | 34p |
+| Vizuális állapot (`completed`) + UX (érthető hibaüzenet) | 8p |
+| Deploy URL + README rövid futtatási leírás | 8p |
+
+Megjegyzés: a manuális vizuális ellenőrzés kis súlyú, a pontok nagy része automatizált.
 
 ---
 
 ## Futtatás
+
+### 0. Gyors setup ellenőrzés (első lépés)
+
+```bash
+npm install
+npm run dev
+```
+
+Nyisd meg: `http://localhost:5173`
+Ha látod a `Todo App` címet, a setup rendben van.
+
+### 1. Házi fejlesztése
 
 ```bash
 npm install

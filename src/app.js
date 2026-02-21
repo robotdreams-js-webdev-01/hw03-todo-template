@@ -4,65 +4,38 @@ const todoInput = document.querySelector('#todo-input');
 const todoList = document.querySelector('#todo-list');
 const errorMessage = document.querySelector('#error-message');
 
-const STORAGE_KEY = 'hw03-todos';
-
-// TODO (11. óra – JSON.parse): Töltsd be a mentett todo-kat a LocalStorage-ból
-//   1. Olvasd ki a localStorage.getItem(STORAGE_KEY) értékét
-//   2. Ha van adat, JSON.parse()-szal alakítsd vissza tömbbé
-//   3. Hívd meg a renderTodos()-t a betöltött tömbből
+// TODO [10p]: Töltsd be a mentett todo-kat a localStorage-ból (pl. getItem). Ha nincs adat, kezeld üres tömbként.
 function loadFromLocalStorage() {
   /* ... */
 }
 
-// TODO (11. óra – JSON.stringify): Mentsd a todo-kat LocalStorage-ba
-//   Paraméter: todos – az aktuális todo tömb
-//   localStorage.setItem(STORAGE_KEY, JSON.stringify(todos))
+// TODO [10p]: Mentsd a todo-kat a localStorage-ba (pl. setItem, JSON.stringify).
 function saveToLocalStorage(todos) {
   /* ... */
 }
 
-// TODO (11. óra – createElement / innerHTML): Rendereld újra a teljes listát
-//   1. Ürítsd ki a todoList tartalmát (todoList.innerHTML = '')
-//   2. Iterálj a todos tömbön (forEach)
-//   3. Minden elemhez hozz létre egy <li>-t:
-//      - A szöveg kapja a 'completed' osztályt, ha todo.done === true
-//      - Legyen benne egy gomb a done-toggle-höz és egy a törléshez
-//   4. Appendeld a li-t a todoList-be
+// TODO [12p]: Rajzold újra a teljes listát a tömb alapján. Minden elem legyen kattintható (teljesítés/törlés).
+//       A kész elemeket vizuálisan különböztesd meg (pl. CSS osztály).
 function renderTodos(todos) {
   /* ... */
 }
 
-// TODO (11. óra – Array push): Hozz létre egy új todo objektumot
-//   Struktúra: { id: Date.now(), text: '...', done: false }
-//   1. Olvasd ki az aktuális todos tömböt a LocalStorage-ból
-//   2. Push-old az új elemet
-//   3. Mentsd vissza: saveToLocalStorage(todos)
-//   4. Rendereld: renderTodos(todos)
+// TODO [6p]: Új todo hozzáadása szöveg alapján. Egyedi id, szöveg, kész-e. Mentsd és rajzolj újra.
 function addTodo(text) {
   /* ... */
 }
 
-// TODO (11. óra – Array filter): Töröld a todo-t az id alapján
-//   1. Szűrd ki az adott id-jű elemet a tömbből
-//   2. Mentsd a szűrt tömböt: saveToLocalStorage
-//   3. Rendereld: renderTodos
+// TODO [4p]: Todo törlése id alapján. Mentsd és rajzolj újra.
 function deleteTodo(id) {
   /* ... */
 }
 
-// TODO (11. óra – Array map): Váltsd a done állapotot az id alapján
-//   1. Map-peld a tömböt: ha az elem id-je egyezik, adj vissza { ...todo, done: !todo.done }
-//   2. Mentsd: saveToLocalStorage
-//   3. Rendereld: renderTodos
+// TODO [4p]: Egy todo „kész” állapotának váltása id alapján. Mentsd és rajzolj újra.
 function toggleTodo(id) {
   /* ... */
 }
 
-// TODO (11. óra – Events): Kezeld a form submit eseményt
-//   1. e.preventDefault() – megakadályozza az oldal újratöltését!
-//   2. Olvasd ki és trim-eld a todoInput értékét
-//   3. Ha üres: jelenítsd meg a hibaüzenetet, térj vissza
-//   4. Ha nem üres: rejtsd el a hibaüzenetet, hívd addTodo()-t, ürítsd az inputot
+// TODO [4p]: Form küldés kezelése: ne töltődjön újra az oldal. Üres input ne hozzon létre todo-t.
 todoForm.addEventListener('submit', (e) => {
   /* ... */
 });
