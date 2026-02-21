@@ -1,0 +1,55 @@
+name: CI – HW03
+
+on:
+  push:
+    branches: ['**']
+  pull_request:
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Függőségek telepítése
+        run: npm install
+
+      - name: Rejtett tesztek előkészítése
+        env:
+          HIDDEN_TEST_B64: ${{ secrets.HIDDEN_TEST_HW03 }}
+        run: |
+          mkdir -p .hidden-tests/hw03
+          if [ -n "$HIDDEN_TEST_B64" ]; then
+            echo "$HIDDEN_TEST_B64" | base64 -d > .hidden-tests/hw03/hw03.spec.js
+            echo "✅ Rejtett tesztek betöltve."
+          else
+            echo "ℹ️ HIDDEN_TEST_HW03 secret nincs beállítva – csak alapvető tesztek futnak."
+          fi
+
+      - name: Tesztek futtatása
+        run: npm test
+
+  score:
+    needs: build-and-test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Pontszám kiszámítása
+        run: node .github/scripts/computeScore.js
+
+      - name: Pontszám feltöltése artifactként
+        uses: actions/upload-artifact@v4
+        with:
+          name: hw03-score
+          path: hw03-score.json
+          retention-days: 90

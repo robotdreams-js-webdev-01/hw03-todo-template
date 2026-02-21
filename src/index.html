@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo App</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h1>Todo App</h1>
+
+    <!-- 11. óra: form submit event + preventDefault() -->
+    <form id="todo-form">
+      <input id="todo-input" type="text" placeholder="Új todo..." autocomplete="off" />
+      <button type="submit">Hozzáadás</button>
+    </form>
+
+    <!-- TODO (11. óra – DOM manipuláció): Hibaüzenet szövege ide kerül dinamikusan -->
+    <p id="error-message" class="hidden"></p>
+
+    <!-- TODO (11. óra – createElement): A todo elemek ide kerülnek dinamikusan -->
+    <ul id="todo-list"></ul>
+  </div>
+  <script src="app.js"></script>
+</body>
+
+</html>

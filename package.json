@@ -1,0 +1,17 @@
+{
+  "name": "hw03-todo",
+  "version": "1.0.0",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "jest --runInBand --json --outputFile=jest-results.json"
+  },
+  "devDependencies": {
+    "jest": "^29",
+    "jest-environment-jsdom": "^29",
+    "vite": "^6"
+  }
+}
