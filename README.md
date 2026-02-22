@@ -22,13 +22,13 @@ Készíts egy **Vanilla JS Todo alkalmazást** – keretrendszer nélkül, csak 
 
 ### Funkcionális követelmények
 
-| Funkció | Leírás |
-|---|---|
-| **Hozzáadás** | Input mező + „Hozzáadás" gomb, VAGY Enter lenyomása |
-| **Törlés** | Minden todo-nak legyen saját X / Törlés gombja |
-| **Complete jelölés** | Kattintásra vizuálisan jelölődjön (pl. áthúzás + halvány szín) |
-| **LocalStorage** | Oldal újratöltése után is maradjanak meg a todo-k |
-| **Validáció** | Üres input ne hozzon létre todo-t; jelenjen meg olvasható hibaüzenet |
+| Funkció              | Leírás                                                               |
+| -------------------- | -------------------------------------------------------------------- |
+| **Hozzáadás**        | Input mező + „Hozzáadás" gomb, VAGY Enter lenyomása                  |
+| **Törlés**           | Minden todo-nak legyen saját X / Törlés gombja                       |
+| **Complete jelölés** | Kattintásra vizuálisan jelölődjön (pl. áthúzás + halvány szín)       |
+| **LocalStorage**     | Oldal újratöltése után is maradjanak meg a todo-k                    |
+| **Validáció**        | Üres input ne hozzon létre todo-t; jelenjen meg olvasható hibaüzenet |
 
 ### Technikai megkötések
 
@@ -47,15 +47,11 @@ Készíts egy **Vanilla JS Todo alkalmazást** – keretrendszer nélkül, csak 
 
 ---
 
-## Pontozás (50 pont)
+## Pontozás
 
-| Kritérium | Pont |
-|---|---|
-| `app.js` TODO-k megvalósítása (load/save/render/add/delete/toggle/submit) | 34p |
-| Vizuális állapot (`completed`) + UX (érthető hibaüzenet) | 8p |
-| Deploy URL + README rövid futtatási leírás | 8p |
-
-Megjegyzés: a manuális vizuális ellenőrzés kis súlyú, a pontok nagy része automatizált.
+- **Automatikus pont (CI tesztek):** max 34 p
+- **Manuális pont (dizájn, UX, deploy – az oktató adja):** max 16 p
+- **Összesen:** 50 pont
 
 ---
 
