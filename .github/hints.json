@@ -1,0 +1,86 @@
+{
+  "src/app.js főfájl létrehozva": {
+    "lesson": 11,
+    "tip": "Hozd létre a src/app.js fájlt"
+  },
+  "Az alkalmazás DOM szelektorokat használ": {
+    "lesson": 11,
+    "tip": "Használj document.querySelector() vagy getElementById() – 11. óra, DOM szelektorok"
+  },
+  "Az alkalmazás a form elemet kezeli": {
+    "lesson": 11,
+    "tip": "Válaszd ki a form elemet: const form = document.querySelector('#todo-form')"
+  },
+  "Az alkalmazás a beviteli mezőt kezeli": {
+    "lesson": 11,
+    "tip": "Válaszd ki az inputot: const input = document.querySelector('#todo-input')"
+  },
+  "Az alkalmazás eseménykezelőt regisztrál": {
+    "lesson": 11,
+    "tip": "Használj addEventListener() hívást – 11. óra, Event listeners rész"
+  },
+  "Az alkalmazás form submit eseményt kezel": {
+    "lesson": 11,
+    "tip": "form.addEventListener('submit', (e) => { ... })"
+  },
+  "Az alkalmazás megakadályozza az alapértelmezett form viselkedést": {
+    "lesson": 11,
+    "tip": "Hívd meg az e.preventDefault() metódust a submit handlerben"
+  },
+  "Az alkalmazás törlési funkciót tartalmaz": {
+    "lesson": 11,
+    "tip": "Használj .filter() metódust a törléshez – szűrd ki a törlendő elemet"
+  },
+  "Az alkalmazás kész/teljesített állapotot tud jelölni": {
+    "lesson": 11,
+    "tip": "Adj done: false property-t minden todo objektumhoz, toggle-öld click-re"
+  },
+  "Az alkalmazás tömb adatszerkezetet használ": {
+    "lesson": 11,
+    "tip": "Tárolj minden todo-t egy tömbben, használj .push() és .filter() metódusokat"
+  },
+  "Az alkalmazás input validációt végez": {
+    "lesson": 11,
+    "tip": "Ellenőrizd: if (input.value.trim() === '') return;"
+  },
+  "Az alkalmazás dinamikusan frissíti a DOM-ot": {
+    "lesson": 11,
+    "tip": "Használj innerHTML vagy appendChild hívást a lista újrarajzolásához"
+  },
+  "Az alkalmazás helyi tárolót használ adatmentésre": {
+    "lesson": 11,
+    "tip": "Használj localStorage-t – 11. óra, LocalStorage rész"
+  },
+  "Az alkalmazás adatokat ment a helyi tárolóba": {
+    "lesson": 11,
+    "tip": "localStorage.setItem('todos', JSON.stringify(todos))"
+  },
+  "Az alkalmazás adatokat tölt be a helyi tárolóból": {
+    "lesson": 11,
+    "tip": "localStorage.getItem('todos') az init függvényben"
+  },
+  "Az alkalmazás JSON szerializációt használ mentéskor": {
+    "lesson": 11,
+    "tip": "JSON.stringify(todos) mentés előtt"
+  },
+  "Az alkalmazás JSON deszerializációt használ betöltéskor": {
+    "lesson": 11,
+    "tip": "JSON.parse(localStorage.getItem('todos') || '[]') betöltéskor"
+  },
+  "Az alkalmazás alapértékkel kezeli az üres LocalStorage-t": {
+    "lesson": 11,
+    "tip": "JSON.parse(localStorage.getItem('todos') || '[]') – a || '[]' az alapérték"
+  },
+  "Az alkalmazás egyedi azonosítóval látja el a todo elemeket": {
+    "lesson": 11,
+    "tip": "Adj id-t minden todo-hoz: id: Date.now()"
+  },
+  "Az alkalmazás betöltő függvényt hív oldal indulásakor": {
+    "lesson": 11,
+    "tip": "Hívd meg az init() függvényed a fájl végén, vagy DOMContentLoaded eventben"
+  },
+  "Az alkalmazás strukturált függvényeket definiál": {
+    "lesson": 11,
+    "tip": "Bontsd szét a kódot: addTodo(), deleteTodo(), toggleTodo(), render(), save() függvényekre"
+  }
+}
