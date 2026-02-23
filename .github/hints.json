@@ -1,55 +1,39 @@
 {
-  "src/app.js főfájl létrehozva": {
+  "src/app.js főfájl létezik": {
     "lesson": 11,
-    "tip": "Hozd létre a src/app.js fájlt"
-  },
-  "Az alkalmazás DOM szelektorokat használ": {
-    "lesson": 11,
-    "tip": "Használj document.querySelector() vagy getElementById() – 11. óra, DOM szelektorok"
-  },
-  "Az alkalmazás a form elemet kezeli": {
-    "lesson": 11,
-    "tip": "Válaszd ki a form elemet: const form = document.querySelector('#todo-form')"
-  },
-  "Az alkalmazás a beviteli mezőt kezeli": {
-    "lesson": 11,
-    "tip": "Válaszd ki az inputot: const input = document.querySelector('#todo-input')"
-  },
-  "Az alkalmazás eseménykezelőt regisztrál": {
-    "lesson": 11,
-    "tip": "Használj addEventListener() hívást – 11. óra, Event listeners rész"
-  },
-  "Az alkalmazás form submit eseményt kezel": {
-    "lesson": 11,
-    "tip": "form.addEventListener('submit', (e) => { ... })"
+    "tip": "A sablonban már van src/app.js – ne töröld."
   },
   "Az alkalmazás megakadályozza az alapértelmezett form viselkedést": {
     "lesson": 11,
-    "tip": "Hívd meg az e.preventDefault() metódust a submit handlerben"
+    "tip": "A submit handlerben hívd: e.preventDefault()"
   },
   "Az alkalmazás törlési funkciót tartalmaz": {
     "lesson": 11,
-    "tip": "Használj .filter() metódust a törléshez – szűrd ki a törlendő elemet"
+    "tip": "Használj .filter() a törlendő elem kiszűréséhez"
   },
   "Az alkalmazás kész/teljesített állapotot tud jelölni": {
     "lesson": 11,
-    "tip": "Adj done: false property-t minden todo objektumhoz, toggle-öld click-re"
+    "tip": "Minden todo-nak legyen done: true/false; click-re toggle-öld"
   },
   "Az alkalmazás tömb adatszerkezetet használ": {
     "lesson": 11,
-    "tip": "Tárolj minden todo-t egy tömbben, használj .push() és .filter() metódusokat"
+    "tip": "Tárold a todo-kat tömbben; .push() új, .filter() törléshez"
   },
   "Az alkalmazás input validációt végez": {
     "lesson": 11,
-    "tip": "Ellenőrizd: if (input.value.trim() === '') return;"
+    "tip": "if (input.value.trim() === '') return;"
+  },
+  "Az alkalmazás click eseményre reagál": {
+    "lesson": 11,
+    "tip": "addEventListener('click', ...) a listaelemeken"
   },
   "Az alkalmazás dinamikusan frissíti a DOM-ot": {
     "lesson": 11,
-    "tip": "Használj innerHTML vagy appendChild hívást a lista újrarajzolásához"
+    "tip": "innerHTML vagy createElement + appendChild / textContent"
   },
   "Az alkalmazás helyi tárolót használ adatmentésre": {
     "lesson": 11,
-    "tip": "Használj localStorage-t – 11. óra, LocalStorage rész"
+    "tip": "localStorage.setItem / getItem"
   },
   "Az alkalmazás adatokat ment a helyi tárolóba": {
     "lesson": 11,
@@ -57,7 +41,7 @@
   },
   "Az alkalmazás adatokat tölt be a helyi tárolóból": {
     "lesson": 11,
-    "tip": "localStorage.getItem('todos') az init függvényben"
+    "tip": "localStorage.getItem('todos') betöltéskor"
   },
   "Az alkalmazás JSON szerializációt használ mentéskor": {
     "lesson": 11,
@@ -65,22 +49,26 @@
   },
   "Az alkalmazás JSON deszerializációt használ betöltéskor": {
     "lesson": 11,
-    "tip": "JSON.parse(localStorage.getItem('todos') || '[]') betöltéskor"
+    "tip": "JSON.parse(localStorage.getItem('todos') || '[]')"
   },
   "Az alkalmazás alapértékkel kezeli az üres LocalStorage-t": {
     "lesson": 11,
-    "tip": "JSON.parse(localStorage.getItem('todos') || '[]') – a || '[]' az alapérték"
+    "tip": "|| '[]' vagy try/catch üres vagy hibás adat esetén"
   },
   "Az alkalmazás egyedi azonosítóval látja el a todo elemeket": {
     "lesson": 11,
-    "tip": "Adj id-t minden todo-hoz: id: Date.now()"
+    "tip": "id: Date.now() vagy crypto.randomUUID()"
   },
-  "Az alkalmazás betöltő függvényt hív oldal indulásakor": {
+  "A JavaScript app.js legalább 40 sor kódot tartalmaz": {
     "lesson": 11,
-    "tip": "Hívd meg az init() függvényed a fájl végén, vagy DOMContentLoaded eventben"
+    "tip": "Töltsd ki a TODO függvényeket – a sablon csak váz"
   },
-  "Az alkalmazás strukturált függvényeket definiál": {
+  "A package.json tartalmaz dev és test scripteket": {
     "lesson": 11,
-    "tip": "Bontsd szét a kódot: addTodo(), deleteTodo(), toggleTodo(), render(), save() függvényekre"
+    "tip": "A sablonban már van – ne töröld."
+  },
+  "README.md tartalmaz deployed URL-t": {
+    "lesson": 11,
+    "tip": "Deploy után másold be az élő URL-t a README-be"
   }
 }

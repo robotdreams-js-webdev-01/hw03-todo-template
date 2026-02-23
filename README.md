@@ -30,12 +30,19 @@ Készíts egy **Vanilla JS Todo alkalmazást** – keretrendszer nélkül, csak 
 | **LocalStorage**     | Oldal újratöltése után is maradjanak meg a todo-k                    |
 | **Validáció**        | Üres input ne hozzon létre todo-t; jelenjen meg olvasható hibaüzenet |
 
-### Technikai megkötések
+### Amit a sablon már ad
 
-- **Csak Vanilla JS** – ne használj React-et, Vue-t, jQuery-t stb.
-- A todo-kat tömbként tárold: `[{ id: Date.now(), text: '...', done: false }]`
-- A `renderTodos()` függvény mindig újraépíti a teljes listát a tömbből
-- **Deploy** – tedd ki élőbe (GitHub Pages vagy Netlify), és az élő URL-t írd a README-be
+A sablon tartalmazza: HTML (form, input, lista, hibaüzenet helye), CSS (completed stílus), és az `app.js` vázat (selectorok, üres függvények, submit listener váz). **Neked kell megvalósítanod a logikát.**
+
+### Explicit implementációs elvárások
+
+- **preventDefault** – A submit handlerben hívd az `e.preventDefault()`-et.
+- **Tömb** – Todo-k tömbként; használj `.push()`, `.filter()` (törlés), validáció (`trim()`, üres ellenőrzés).
+- **Click** – Listaelemekre click (teljesítés / törlés).
+- **DOM** – Lista dinamikusan épüljön (`innerHTML` / `createElement` / `textContent`).
+- **LocalStorage** – `setItem`, `getItem`, `JSON.stringify`, `JSON.parse`; üres tároló alapértéke pl. `|| '[]'`.
+- **Egyedi id** – Minden todo kapjon egyedi id-t (pl. `Date.now()`).
+- **Deploy** – Az élő URL kerüljön a README-be.
 
 ---
 
